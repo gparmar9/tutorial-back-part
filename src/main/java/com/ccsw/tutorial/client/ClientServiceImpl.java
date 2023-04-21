@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.ccsw.tutorial.client.model.Client;
 import com.ccsw.tutorial.client.model.ClientDto;
+import com.ccsw.tutorial.exceptions.NameUsed;
 
 @Service
 public class ClientServiceImpl implements ClientService {
@@ -43,10 +44,10 @@ public class ClientServiceImpl implements ClientService {
     @Override
     public void save(Long id, ClientDto dto) throws Error {
         Client cliente = null;
-        List<Client> name_repeat = this.clientRepository.findByName(dto.getName());
+        List<Client> nameRepeat = this.clientRepository.findByName(dto.getName());
 
-        if (!name_repeat.isEmpty()) {
-            throw new Error("Error: este nombre ya existe");
+        if (!nameRepeat.isEmpty()) {
+            throw new NameUsed("Error: este nombre ya existe");
         }
 
         if (id == null) {

@@ -11,8 +11,8 @@ public class LendingDto {
     private Long id;
     private GameDto game;
     private ClientDto client;
-    private Date begin_date;
-    private Date end_date;
+    private Date beginDate;
+    private Date endDate;
 
     // Getters and Setters
     public Long getId() {
@@ -39,20 +39,20 @@ public class LendingDto {
         this.client = client;
     }
 
-    public Date getBegin_date() {
-        return begin_date;
+    public Date getBeginDate() {
+        return beginDate;
     }
 
-    public void setBegin_date(Date begin_date) {
-        this.begin_date = begin_date;
+    public void setBeginDate(Date beginDate) {
+        this.beginDate = beginDate;
     }
 
-    public Date getEnd_date() {
-        return end_date;
+    public Date getEndDate() {
+        return endDate;
     }
 
-    public void setEnd_date(Date end_date) {
-        this.end_date = end_date;
+    public void setEndDate(Date endDate) {
+        this.endDate = endDate;
     }
 
 }

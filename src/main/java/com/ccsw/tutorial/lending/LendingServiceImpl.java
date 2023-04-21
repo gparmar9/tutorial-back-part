@@ -50,8 +50,8 @@ public class LendingServiceImpl implements LendingService {
         Long idGame = dto.getGame().getId();
         Long idClient = dto.getClient().getId();
 
-        Date bDate = dto.getBegin_date();
-        Date eDate = dto.getEnd_date();
+        Date bDate = dto.getBeginDate();
+        Date eDate = dto.getEndDate();
 
         if (!this.lendingRepository.findGames(idGame, bDate, eDate).isEmpty()) {
             throw new Error("Error: El juego ya está prestado");

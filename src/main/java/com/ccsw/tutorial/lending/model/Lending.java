@@ -24,18 +24,18 @@ public class Lending {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "game_id", nullable = false)
+    @JoinColumn(name = "gameId", nullable = false)
     private Game game;
 
     @ManyToOne
-    @JoinColumn(name = "client_id", nullable = false)
+    @JoinColumn(name = "clientId", nullable = false)
     private Client client;
 
-    @Column(name = "begin_date")
-    private Date begin_date;
+    @Column(name = "beginDate")
+    private Date beginDate;
 
-    @Column(name = "end_date")
-    private Date end_date;
+    @Column(name = "endDate")
+    private Date endDate;
 
     public Long getId() {
         return id;
@@ -61,20 +61,20 @@ public class Lending {
         this.client = client;
     }
 
-    public Date getBegin_date() {
-        return begin_date;
+    public Date getBeginDate() {
+        return beginDate;
     }
 
-    public void setBegin_date(Date begin_date) {
-        this.begin_date = begin_date;
+    public void setBeginDate(Date beginDate) {
+        this.beginDate = beginDate;
     }
 
-    public Date getEnd_date() {
-        return end_date;
+    public Date getEndDate() {
+        return endDate;
     }
 
-    public void setEnd_date(Date end_date) {
-        this.end_date = end_date;
+    public void setEndDate(Date endDate) {
+        this.endDate = endDate;
     }
 
 }
