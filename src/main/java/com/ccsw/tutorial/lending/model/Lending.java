@@ -24,17 +24,17 @@ public class Lending {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "gameId", nullable = false)
+    @JoinColumn(name = "game_id", nullable = false)
     private Game game;
 
     @ManyToOne
-    @JoinColumn(name = "clientId", nullable = false)
+    @JoinColumn(name = "client_id", nullable = false)
     private Client client;
 
-    @Column(name = "beginDate")
+    @Column(name = "begin_date")
     private Date beginDate;
 
-    @Column(name = "endDate")
+    @Column(name = "end_date")
     private Date endDate;
 
     public Long getId() {

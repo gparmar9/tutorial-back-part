@@ -22,10 +22,10 @@ INSERT INTO CLIENT(id, name) VALUES (3, 'Pedro');
 INSERT INTO CLIENT(id, name) VALUES (4, 'Federico');
 INSERT INTO CLIENT(id, name) VALUES (5, 'Ester');
 
-INSERT INTO LENDING(id, game_id, client_id, beginDate, endDate) VALUES (1, 1, 1, '2023-09-03', '2023-09-15');
-INSERT INTO LENDING(id, game_id, client_id, beginDate, endDate) VALUES (2, 6, 3, '2023-10-11', '2023-10-13');
-INSERT INTO LENDING(id, game_id, client_id, beginDate, endDate) VALUES (3, 2, 5, '2023-01-22', '2023-01-30');
-INSERT INTO LENDING(id, game_id, client_id, beginDate, endDate) VALUES (4, 4, 2, '2023-03-13', '2023-03-18');
-INSERT INTO LENDING(id, game_id, client_id, beginDate, endDate) VALUES (5, 3, 4, '2023-06-07', '2023-06-17');
-INSERT INTO LENDING(id, game_id, client_id, beginDate, endDate) VALUES (6, 5, 1, '2023-09-17', '2023-09-20');
+INSERT INTO LENDING(id, game_id, client_id, begin_date, end_date) VALUES (1, 1, 1, '2023-09-03', '2023-09-15');
+INSERT INTO LENDING(id, game_id, client_id, begin_date, end_date) VALUES (2, 6, 3, '2023-10-11', '2023-10-13');
+INSERT INTO LENDING(id, game_id, client_id, begin_date, end_date) VALUES (3, 2, 5, '2023-01-22', '2023-01-30');
+INSERT INTO LENDING(id, game_id, client_id, begin_date, end_date) VALUES (4, 4, 2, '2023-03-13', '2023-03-18');
+INSERT INTO LENDING(id, game_id, client_id, begin_date, end_date) VALUES (5, 3, 4, '2023-06-07', '2023-06-17');
+INSERT INTO LENDING(id, game_id, client_id, begin_date, end_date) VALUES (6, 5, 1, '2023-09-17', '2023-09-20');
 
