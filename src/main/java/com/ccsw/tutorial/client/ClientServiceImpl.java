@@ -47,7 +47,7 @@ public class ClientServiceImpl implements ClientService {
         List<Client> nameRepeat = this.clientRepository.findByName(dto.getName());
 
         if (!nameRepeat.isEmpty()) {
-            throw new NameUsed("Error: este nombre ya existe");
+            throw new NameUsed("Error: este cliente ya existe");
         }
 
         if (id == null) {

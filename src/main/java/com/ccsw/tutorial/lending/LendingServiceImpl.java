@@ -10,6 +10,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
 import com.ccsw.tutorial.client.ClientService;
+import com.ccsw.tutorial.exceptions.GameUsed;
+import com.ccsw.tutorial.exceptions.MaxLendings;
 import com.ccsw.tutorial.game.GameService;
 import com.ccsw.tutorial.lending.model.Lending;
 import com.ccsw.tutorial.lending.model.LendingDto;
@@ -54,11 +56,11 @@ public class LendingServiceImpl implements LendingService {
         Date eDate = dto.getEndDate();
 
         if (!this.lendingRepository.findGames(idGame, bDate, eDate).isEmpty()) {
-            throw new Error("Error: El juego ya está prestado");
+            throw new GameUsed("Error: El juego ya está prestado");
         }
 
         else if (this.lendingRepository.findClients(idClient, bDate, eDate).size() > 1) {
-            throw new Error("Error: El cliente ha alcanzado el límite de préstamos");
+            throw new MaxLendings("Error: El cliente ha alcanzado el límite de préstamos");
         }
 
         else {
